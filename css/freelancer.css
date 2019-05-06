@@ -1,9 +1,3 @@
-/*!
- * Start Bootstrap - Freelancer Bootstrap Theme (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
- */
-
 body {
     overflow-x: hidden;
 }
@@ -22,7 +16,7 @@ a:focus,
 a:active,
 a.active {
     outline: 0;
-    color: #18bc9c;
+    color: #8902f7 ;
 }
 
 h1,
@@ -63,7 +57,7 @@ hr.star-light {
 
 hr.star-light:after {
     color: #fff;
-    background-color: #18bc9c;
+    background-color: #8902f7 ;
 }
 
 hr.star-primary {
@@ -82,7 +76,13 @@ hr.star-primary:after {
 header {
     text-align: center;
     color: #fff;
-    background: #18bc9c;
+    background: #bb02e0;
+    background: -moz-linear-gradient(top, #bb02e0 0%, #8902f7 100%);
+    background: -webkit-linear-gradient(top, #bb02e0 0%,#8902f7 100%);
+    background: linear-gradient(to bottom, #bb02e0 0%,#8902f7 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bb02e0', endColorstr='#8902f7',GradientType=0 );
+
+    margin-top: -82px;
 }
 
 header .container {
@@ -111,11 +111,11 @@ header .intro-text .skills {
 @media(min-width:768px) {
     header .container {
         padding-top: 200px;
-        padding-bottom: 100px;
+        padding-bottom: 200px;
     }
 
     header .intro-text .name {
-        font-size: 4.75em;
+        font-size: 3em;
     }
 
     header .intro-text .skills {
@@ -140,6 +140,7 @@ header .intro-text .skills {
 
     .navbar-fixed-top.navbar-shrink {
         padding: 10px 0;
+        background-color: #bb02e0;
     }
 
     .navbar-fixed-top.navbar-shrink .navbar-brand {
@@ -181,7 +182,7 @@ section h2 {
 
 section.success {
     color: #fff;
-    background: #18bc9c;
+    background: #8902f7 ;
 }
 
 section.success a,
@@ -202,7 +203,9 @@ section.success a.active {
         padding-top: 75px;
     }
 }
-
+#portfolio {
+    padding: 0;
+}
 #portfolio .portfolio-item {
     right: 0;
     margin: 0 0 15px;
@@ -212,7 +215,8 @@ section.success a.active {
     display: block;
     position: relative;
     margin: 0 auto;
-    max-width: 400px;
+    max-width:100%;
+    padding: 0;
 }
 
 #portfolio .portfolio-item .portfolio-link .caption {
@@ -220,7 +224,7 @@ section.success a.active {
     width: 100%;
     height: 100%;
     opacity: 0;
-    background: rgba(24,188,156,.9);
+    background: rgba(0,0,0,.4);
     -webkit-transition: all ease .5s;
     -moz-transition: all ease .5s;
     transition: all ease .5s;
@@ -256,7 +260,7 @@ section.success a.active {
 
 @media(min-width:767px) {
     #portfolio .portfolio-item {
-        margin: 0 0 30px;
+        margin: 0;
     }
 }
 
@@ -274,7 +278,7 @@ section.success a.active {
 .btn-outline:active,
 .btn-outline.active {
     border: solid 2px #fff;
-    color: #18bc9c;
+    color: #8902f7 ;
     background: #fff;
 }
 
@@ -327,7 +331,7 @@ section.success a.active {
 }
 
 .floating-label-form-group-with-focus label {
-    color: #18bc9c;
+    color: #8902f7 ;
 }
 
 form .row:first-child .floating-label-form-group {
@@ -339,16 +343,20 @@ footer {
 }
 
 footer h3 {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 footer .footer-above {
-    padding-top: 50px;
-    background-color: #2c3e50;
+    padding-top: 10px;
+    background: #bb02e0;
+    background: -moz-linear-gradient(top, #bb02e0 0%, #8902f7 100%);
+    background: -webkit-linear-gradient(top, #bb02e0 0%,#8902f7 100%);
+    background: linear-gradient(to bottom, #bb02e0 0%,#8902f7 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bb02e0', endColorstr='#8902f7',GradientType=0 );
 }
 
 footer .footer-col {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 footer .footer-below {
@@ -456,4 +464,42 @@ footer .footer-below {
 .portfolio-modal .modal-backdrop {
     display: none;
     opacity: 0;
+}
+
+
+
+
+/* Custom styles */
+.navbar-default {
+    background-color: transparent;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+    color: #fff !important;
+    background-color: transparent;
+}
+.px-0 {
+    padding-left: 0;
+    padding-right: 0;
+}
+.row.no-gutters .col-sm-4 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+.navbar-default .navbar-nav>li>a::after {
+    position: absolute;
+    content: "";
+    bottom: 12px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 0;
+    border-bottom: 1px solid #fff;
+    transition: ease 0.2s;
+}
+.navbar-default .navbar-nav>li>a:hover:after {
+    width: 60px;
+}
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
+    color: #fff;
+    background-color: transparent;
 }
